@@ -96,7 +96,7 @@ result= (t+r+u+e)*10 + (l+o+v+e)
 
 if result<=10 or result>=90:
     message="you go together like coke and mentos."
-elif result<=50 or result>=40:
+elif result>=40 and result<=50:
     message="you are alright together."
 else:
     message= ""
@@ -106,3 +106,20 @@ print(f"Yor score is {result},", message)
 
 # Treasure something
 print("Welcome to Treasure Island. Your mission is to find the treasure.")
+direction = input("left or right?")
+if direction == "left":
+    action = input("swim or wait?")
+    if action == "wait":
+        door = input("Which door? red, blue or yellow?")
+        if door == "red":
+            print("Burned by fire. Game Over.")
+        elif door == "blue":
+            print("Eaten by beasts. Game Over.")
+        elif door == "yellow":
+            print("You Win!")
+        else:
+            print("Game Over.")
+    else:
+        print("Attacked by trout. Game Over.")
+else:
+    print("Fall into a hole. Game Over.")
